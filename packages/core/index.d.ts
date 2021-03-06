@@ -247,7 +247,7 @@ export abstract class Notice extends NoticeProperties {
    * @returns A promise that is rejected if the opening wasn't successful, or
    *          resolved once it is.
    */
-  open(immediate?: boolean): Promise;
+  open(immediate?: boolean): Promise<any>;
 
   /**
    * Close the notice.
@@ -262,7 +262,7 @@ export abstract class Notice extends NoticeProperties {
     immediate?: boolean,
     timerHide?: boolean,
     waitAfterward?: boolean
-  ): Promise;
+  ): Promise<any>;
 
   /**
    * Cancel any closing operation the notice is going through.
