@@ -1,4 +1,4 @@
-import Notice from './';
+import {Notice} from './';
 
 declare abstract class StackProperties {
   /**
@@ -198,9 +198,9 @@ export default class Stack extends StackProperties {
   swap(
     one: Notice,
     theOther: Notice,
-    immediate: boolean = false,
-    waitAfter: boolean = false
-  ): Promise;
+    immediate: boolean,
+    waitAfter: boolean
+  ): Promise<any>;
 
   /**
    * Add an event listener.
@@ -217,7 +217,7 @@ export default class Stack extends StackProperties {
    * @param event The event.
    * @param detail An object to include on the event as the `detail` property.
    */
-  fire(event: string, detail: {} = {}): void;
+  fire(event: string, detail: {}): void;
 
   /**
    * Position all the notices in the stack.
